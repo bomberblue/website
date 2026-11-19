@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fig &amp; Filter — Catering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Fig &amp; Filter</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html" aria-current="page">Catering</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-intro">
+        <h1>Catering</h1>
+        <p class="lede">We cater meetings, workshops, and office mornings within a 5km radius. Everything is made in our kitchen the same morning it's delivered. Order by 2:00pm the day before; for the Full Spread, give us two working days.</p>
+      </div>
+
+      <img class="photo-wide catering-hero" src="images/catering-spread.jpg" alt="A catering spread of filled croissants and canapés on serving stands" width="1200" height="800">
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h2>Packages</h2>
+        <div class="package-grid">
+          <article class="package">
+            <h3>The Coffee Run <span class="package-price">— $9 per person</span></h3>
+            <p>For meetings that just need good coffee.</p>
+            <ul>
+              <li>A 2.5L flask of batch-brew filter per 8 people</li>
+              <li>Oat and dairy milk, cups, and sugar included</li>
+              <li>Add a flask of chai for $12</li>
+            </ul>
+          </article>
+
+          <article class="package package--featured">
+            <h3>The Morning Tea <span class="package-price">— $16 per person</span></h3>
+            <p>The one most offices reorder.</p>
+            <ul>
+              <li>Batch-brew filter as above</li>
+              <li>Two bakery items per person (croissants, scones, cookie of the day)</li>
+              <li>Seasonal fruit platter</li>
+              <li>Minimum 6 people</li>
+            </ul>
+          </article>
+
+          <article class="package">
+            <h3>The Full Spread <span class="package-price">— $28 per person</span></h3>
+            <p>For workshops, planning days, and celebrations.</p>
+            <ul>
+              <li>Everything in The Morning Tea</li>
+              <li>Sandwich platter (halloumi and roast vegetable, chicken schnitzel)</li>
+              <li>Fresh orange juice and house lemonade</li>
+              <li>Minimum 10 people, two working days' notice</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="order-section">
+          <h2>How to order</h2>
+          <p class="lede">Email <strong>catering@figandfilter.example</strong> with your date, headcount, delivery address, and any dietary needs. We confirm within one working day. Delivery is free within 5km; we drop off, set up, and collect the kit the same afternoon.</p>
+          <div class="cta-block">
+            <a class="btn-primary" href="mailto:catering@figandfilter.example">Order catering →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Fig &amp; Filter</p>
+        <p class="footer-tagline">Roasted here. Baked here. Poured for you.</p>
+      </div>
+      <p class="footer-meta">8 Chalk Lane (corner Weaver St) · Tue–Sun 7:30am–5:00pm</p>
+      <div class="footer-actions">
+        <a class="footer-link" href="mailto:hello@figandfilter.example">hello@figandfilter.example</a>
+        <a class="footer-link footer-catering" href="catering.html">Order catering →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</body>
+</html>

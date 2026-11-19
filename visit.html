@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fig &amp; Filter — Visit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Fig &amp; Filter</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html" aria-current="page">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--tight">
+      <div class="container">
+        <div class="visit-grid">
+          <div class="visit-column">
+            <div class="visit-card address">
+              <p class="eyebrow">Address</p>
+              <h1>Fig &amp; Filter</h1>
+              <p class="address-line">8 Chalk Lane (corner of Weaver Street)</p>
+            </div>
+
+            <div class="visit-card">
+              <h2>Opening hours</h2>
+              <div class="hours-list">
+                <div class="hours-row hours-row--closed">
+                  <span class="day">Monday</span>
+                  <span class="time">Closed</span>
+                </div>
+                <div class="hours-row">
+                  <span class="day">Tuesday – Friday</span>
+                  <span class="time">7:30am – 5:00pm</span>
+                </div>
+                <div class="hours-row">
+                  <span class="day">Saturday – Sunday</span>
+                  <span class="time">8:00am – 5:00pm</span>
+                </div>
+              </div>
+              <p class="hours-note">Kitchen closes 3:30pm daily. Public holidays: check our door or email us.</p>
+            </div>
+
+            <div class="cta-block visit-cta">
+              <a class="btn-primary" href="https://maps.google.com/?q=8+Chalk+Lane+corner+of+Weaver+Street" target="_blank" rel="noopener noreferrer">Find us →</a>
+            </div>
+          </div>
+
+          <div class="visit-column">
+            <img class="storefront" src="images/storefront.jpg" alt="The Fig &amp; Filter corner shopfront with deep-green window frames and a pavement table" width="1600" height="900">
+
+            <div class="visit-card">
+              <h2>How to find us</h2>
+              <p>We're the corner shopfront with the deep-green window frames, halfway down Chalk Lane, with the fig tree visible through the side gate. If you can see the takeaway menu lettered on the glass, you're in the right place.</p>
+            </div>
+
+            <div class="visit-card">
+              <h2>Getting here</h2>
+              <ul class="transit-list">
+                <li><strong>On foot or bike:</strong> bike racks are directly outside; the courtyard has space for prams.</li>
+                <li><strong>By train:</strong> eight minutes' walk from Weaver Street station — exit toward the market, then second left.</li>
+                <li><strong>By bus:</strong> routes 14 and 62 stop at the top of Chalk Lane.</li>
+                <li><strong>By car:</strong> street parking on Weaver Street is free for the first hour; there's a paid car park behind the market, four minutes' walk.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-bottom">
+          <div class="visit-card">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:hello@figandfilter.example">hello@figandfilter.example</a></li>
+              <li>Phone: <a href="tel:+15550142286">(555) 014-2286</a></li>
+              <li>Catering enquiries: <a href="mailto:catering@figandfilter.example">catering@figandfilter.example</a></li>
+            </ul>
+          </div>
+
+          <div class="visit-card">
+            <h2>Good to know</h2>
+            <p>The courtyard is dog-friendly; inside is not (sorry — kitchen rules). Big tables can be reserved for groups of six or more by email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Fig &amp; Filter</p>
+        <p class="footer-tagline">Roasted here. Baked here. Poured for you.</p>
+      </div>
+      <p class="footer-meta">8 Chalk Lane (corner Weaver St) · Tue–Sun 7:30am–5:00pm</p>
+      <div class="footer-actions">
+        <a class="footer-link" href="mailto:hello@figandfilter.example">hello@figandfilter.example</a>
+        <a class="footer-link footer-catering" href="catering.html">Order catering →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</body>
+</html>

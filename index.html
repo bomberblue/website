@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fig &amp; Filter — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Fig &amp; Filter</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero-espresso-pour.jpg" alt="Espresso pouring from the portafilter into a white cup at the Fig &amp; Filter counter" width="1600" height="900">
+      <div class="hero-content">
+        <h1>Fig &amp; Filter</h1>
+        <p>Roasted here. Baked here. Poured for you.</p>
+      </div>
+    </section>
+
+    <section class="essentials" aria-label="Essentials">
+      <div class="container">
+        <div class="essentials-card">
+          <p class="essentials-line">Open Tuesday to Sunday, 7:30am – 5:00pm · 8 Chalk Lane · <a class="btn-primary" href="visit.html">Find us →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Three reasons to visit</h2>
+        <div class="reasons">
+          <article class="reason">
+            <h3>We roast our own.</h3>
+            <p>Small batches, twice a week, in the machine you can see from the counter. If you can smell it, it was probably roasted within the last few days.</p>
+          </article>
+          <article class="reason">
+            <h3>The kitchen doesn't cut corners.</h3>
+            <p>Everything in the pastry case was made on site that morning. When the almond croissants run out, they run out.</p>
+          </article>
+          <article class="reason">
+            <h3>Stay as long as you like.</h3>
+            <p>Big tables, honest wifi, and nobody hovering to turn your seat. Laptops welcome on weekdays; humans welcome always.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <img class="photo-wide" src="images/interior-seating.jpg" alt="Wooden tables inside the café, surrounded by shelves of books and tea tins" width="1200" height="800">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="teaser">
+          <p>Hungry already? <a class="text-link" href="menu.html">See the full menu →</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Fig &amp; Filter</p>
+        <p class="footer-tagline">Roasted here. Baked here. Poured for you.</p>
+      </div>
+      <p class="footer-meta">8 Chalk Lane (corner Weaver St) · Tue–Sun 7:30am–5:00pm</p>
+      <div class="footer-actions">
+        <a class="footer-link" href="mailto:hello@figandfilter.example">hello@figandfilter.example</a>
+        <a class="footer-link footer-catering" href="catering.html">Order catering →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</body>
+</html>
